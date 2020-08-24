@@ -13,7 +13,7 @@ cla = sopa.find("div", {"id":'content-core'})
 links = cla.find_all('a')
 conteudo = sopa.find_all('b')
 len(linkas)
-with open('testecsv.csv', 'a', newline='', encoding='utf-8') as file:
+with open('chatbot.csv', 'a', newline='', encoding='utf-8') as file:
     for link in links:
         a = str(link.get_text()).replace(',',' ').replace('[','').replace(']','').replace("", '').replace('\n', '')
         b = str(link.get('href'))
